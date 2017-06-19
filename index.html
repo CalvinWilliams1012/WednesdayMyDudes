@@ -1,0 +1,54 @@
+<!doctype html>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-101185835-2', 'auto');
+  ga('send', 'pageview');
+
+
+  $(document).ready(function(){
+
+  	$("img").on("click", function(){
+	  	var audio = document.getElementById("audio");
+	  	if(audio.paused){
+	  		audio.play();
+	  	}else{
+	  		audio.pause();
+	  		audio.currentTime = 0;
+	  		audio.play();
+	  	}
+
+	  	$(new Image()).css({"z-index":"999","position":"absolute","top":"100"}).attr('src','images/transparent-frog.png').appendTo($('body')).show().animate({left: "+=100px"});
+  	});
+  });
+
+</script>
+<html>
+	<head>
+		<link rel="icon" href="images/frog-face.jpg">
+		<title>W E D N E S D A Y</title>
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	</head>
+	<body>
+		<div id="canvas">
+			<img id="mainFrog" src="images/frog.jpg"  class="img-responsive center-block" alt="It is wednesday, my dudes.">
+
+			<audio id="audio" autoplay>
+				<source src="dudes.mp3" type="audio/mpeg">
+			</audio>
+
+		</div>
+	</body>
+	<footer class="footer navbar-fixed-bottom">
+			<form class="center-block" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+				<input class="center-block" type="hidden" name="cmd" value="_s-xclick">
+				<input class="center-block" type="hidden" name="hosted_button_id" value="MCV5NSS9RMMEY">
+				<input class="center-block" type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+				<img class="center-block" alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+			</form>
+	</footer>
+</html>
