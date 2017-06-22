@@ -11,8 +11,7 @@ $(document).ready(function(){
   	}
 
   	var percentRand = Math.floor((Math.random() * 100) + 1);
-  	console.log(percentRand+"%");
 
-  	$(new Image()).css({"z-index":"999","position":"absolute","top":percentRand+"%"}).addClass("frog").attr('src','assets/images/transparent-frog.png').appendTo($('body')).show().animate(left,);
+  	$(new Image()).css({"z-index":"999","position":"absolute","top":percentRand+"%"}).addClass("frog").attr('src','assets/images/transparent-frog.png').appendTo($('body')).show();
 	});
 });
